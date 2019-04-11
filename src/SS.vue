@@ -9,9 +9,6 @@
 <script>
   export default {
     name: 'SS',
-    data () {
-      return {}
-    },
   }
 </script>
 

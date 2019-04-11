@@ -9,12 +9,8 @@
 <script>
   export default {
     name: 'End',
-    data () {
-      return {}
-    },
     mounted(){
       var c = this.$refs.c;
-      console.log(c);
       var gl = c.getContext('webgl', {
         preserveDrawingBuffer: true
       }),
@@ -234,7 +230,6 @@ void main(){
     color: yellow;
     font-size: 120px;
     width: 100%;
-    height: 100%;
     position: absolute;
     top: 100px;
     text-align: center;
@@ -244,6 +239,10 @@ void main(){
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom:0;
+    margin:0;
+    padding:0;
     background-color: #000;
     z-index: -1;
   }

@@ -19,9 +19,6 @@
 <script>
   export default {
     name: 'ice',
-    data () {
-      return {}
-    },
   }
 </script>
 
@@ -35,7 +32,6 @@
     width: 100%;
     height: 100%;
     background: black;
-
     color: white;
   }
   .photo {

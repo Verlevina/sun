@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-   <my-start v-if="currentSlide === 1"></my-start>
-    <my-sky v-if="currentSlide === 2"></my-sky>
-    <my-people v-if="currentSlide === 3"></my-people>
-    <my-ss v-if="currentSlide === 4"></my-ss>
-    <my-sun v-if="currentSlide === 5"></my-sun>
-    <my-ice v-if="currentSlide === 6"></my-ice>
-    <my-end v-if="currentSlide === 7"></my-end>
+    <div style="position: absolute; top:50%; left: 0; width: 100%; height: 100px; z-index: 99;
+    display: flex; justify-content: space-between">
+      <button class="btn-main" @click="goBack"><</button>
+      <button class="btn-main" @click="goForvard">></button>
+    </div>
+
+    <my-start v-show="currentSlide === 1"></my-start>
+    <my-sky v-show="currentSlide === 2"></my-sky>
+    <my-people v-show="currentSlide === 3"></my-people>
+    <my-ss v-show="currentSlide === 4"></my-ss>
+    <my-sun v-show="currentSlide === 5"></my-sun>
+    <my-ice v-show="currentSlide === 6"></my-ice>
+    <my-end v-show="currentSlide === 7"></my-end>
+
+
   </div>
 </template>
 
@@ -37,20 +45,23 @@ export default {
   methods: {
     onKeyPress(event){
       event.preventDefault();
-      console.log (event.keyCode);
       if(event.keyCode === 39){
-        this.currentSlide++;
-        if(this.currentSlide > 7) {
-          this.currentSlide = 1;
-        }
-        console.log(this.currentSlide)
+       this.goForvard();
       }
       if(event.keyCode=== 37){
-        this.currentSlide--;
-        if( this.currentSlide <= 1 ) {
-          this.currentSlide = 7;
-        }
-        console.log(this.currentSlide)
+       this.goBack();
+      }
+    },
+    goForvard(){
+      this.currentSlide++;
+      if(this.currentSlide > 7) {
+        this.currentSlide = 1;
+      }
+    },
+    goBack(){
+      this.currentSlide--;
+      if( this.currentSlide <= 1 ) {
+        this.currentSlide = 7;
       }
     }
   },
@@ -78,6 +89,20 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
+}
+.btn-main {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,.5);
+  color: white;
+  font-size: 40px;
+  border: none;
+}
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active{
+  background: rgba(255,255,255,.8);
+  color: red;
 }
 
 li {

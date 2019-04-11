@@ -19,9 +19,6 @@
 <script>
   export default {
     name: 'ice',
-    data () {
-      return {}
-    },
   }
 </script>
 
@@ -42,19 +39,6 @@
     height: 200px;
 
 
-  }
-  .dark {
-    background-image: url("./assets/Sundark.jpg");
-  }
-  .dark1 {
-    background-image: url("./assets/Sundark1.jpg");
-  }
-  .light {
-    background-image: url("./assets/warm.jpg");
-  }
-
-  .earth{
-    background-image: url("./assets/ice.jpg");
   }
 
   .sun h2 {
