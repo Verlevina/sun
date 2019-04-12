@@ -15,11 +15,10 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'ice',
-  }
+export default {
+  name: 'ice'
+}
 </script>
 
 <style>

@@ -15,11 +15,10 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'ice',
-  }
+export default {
+  name: 'ice'
+}
 </script>
 
 <style>
@@ -37,7 +36,6 @@
   .sun img {
     width: 300px;
     height: 200px;
-
 
   }
 

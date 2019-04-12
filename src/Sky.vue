@@ -1,17 +1,26 @@
 <template>
-  <div id="sky" class="sky">
-      <h2> Звезды </h2>
+  <div
+    id="sky"
+    class="sky"
+    v-bind:class = sheetParam.class
+  >
+      <h2   v-bind:class = "{left: sheetParam.left}"> {{sheetParam.title}} </h2>
+    <p>{{sheetParam.url}}</p>
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'Sky',
-  }
+export default {
+  name: 'Sky',
+  data () {
+    return {
+    }
+  },
+  props: ['sheetParam']
+}
 </script>
 
-<style>
+<style scoped>
   .sky{
     display: flex;
     flex-direction: column;
@@ -20,11 +29,19 @@
     width: 100%;
     height: 100%;
     background: black;
-    background-image: url("./assets/sky.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
     color: white;
+  }
+  .people-url {
+    background-image: url("./assets/people.jpg")
+  }
+  .sky-url {
+    background-image: url("./assets/sky.jpg")
+  }
+  .left {
+    align-self: flex-start;
   }
 
   .sky h2 {

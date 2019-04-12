@@ -5,11 +5,10 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'SS',
-  }
+export default {
+  name: 'SS'
+}
 </script>
 
 <style>

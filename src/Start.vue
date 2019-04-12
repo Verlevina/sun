@@ -6,11 +6,10 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'Start',
-  }
+export default {
+  name: 'Start'
+}
 </script>
 
 <style>
@@ -34,7 +33,7 @@
   .start p {
     font-size: 40px;
     margin-top: 0;
-    color: black
+    color: white
   }
   .start h2 {
     font-size: 140px;
